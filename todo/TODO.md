@@ -85,9 +85,8 @@
   - Issues: [#1665](https://github.com/rizonesoft/Notepad3/issues/1665), [#370](https://github.com/rizonesoft/Notepad3/issues/370), [#512](https://github.com/rizonesoft/Notepad3/issues/512), [#4331](https://github.com/rizonesoft/Notepad3/issues/4331), [#3652](https://github.com/rizonesoft/Notepad3/issues/3652), [#5399](https://github.com/rizonesoft/Notepad3/issues/5399)
   - See [research/autosave-backup.md](research/autosave-backup.md)
 - [ ] Installer testing on various Windows versions
-- [ ] **AVX2 Build** - Optimized build for modern CPUs
+- [x] **AVX2 Build** - ✅ Added x64_AVX2 to CI matrix
   - Issue: [#4240](https://github.com/rizonesoft/Notepad3/issues/4240)
-- [ ] **ARM64 Build** - Windows ARM64 native build
 - [ ] Language file updates
 - [ ] **Move Beta Page to rizonesoft.com** - Host beta downloads on main site
   - Issue: [#1129](https://github.com/rizonesoft/Notepad3/issues/1129)
@@ -97,6 +96,25 @@
   - Issue: [#5444](https://github.com/rizonesoft/Notepad3/issues/5444)
   - Code: `Notepad3.c:12042` - `bSaveNeeded` check skips save on unmodified files
   - Fix: Check strip-blanks setting before early return at line 12044
+
+## GitHub Actions
+
+- [x] **CI Workflow** - ✅ Added MSVC builds (Win32/x64 Release)
+  - Runs on push/PR to master alongside AppVeyor
+- [x] **ARM64 Build** - ✅ Added to CI matrix (Win32/x64/ARM64)
+- [ ] **Clang-cl Build** - Alternative compiler for better warnings
+- [ ] **Debug Build** - Catch debug-only assertions
+- [ ] **PR Labeler** - Auto-label PRs based on files changed
+- [ ] **Automatic Releases** - Create GitHub releases on tags with built artifacts
+- [ ] **Changelog Generator** - Auto-generate release notes from commits/PRs
+- [ ] **CodeQL Analysis** - Scans C++ code for security vulnerabilities
+- [ ] **Dependency Review** - Checks for vulnerable dependencies in PRs
+- [ ] **MSVC Code Analysis** - Microsoft's static analyzer (/analyze)
+- [ ] **Nightly Releases** - Automated nightly builds via GitHub Actions
+  - Issue: [#5412](https://github.com/rizonesoft/Notepad3/issues/5412)
+  - Schedule: Daily at 2 AM UTC
+  - Package: Portable ZIP with exe, lng, docs, themes, ini files
+  - See [research/nightly_releases.md](research/nightly_releases.md)
 
 ## Low Priority
 
